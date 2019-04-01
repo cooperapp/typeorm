@@ -839,10 +839,10 @@ export class EntityManager {
         if (!findOptions || findOptions.loadEagerRelations !== false)
             FindOptionsUtils.joinEagerRelations(qb, qb.alias, qb.expressionMap.mainAlias!.metadata);
 
-        findOptions = {
-            ...(findOptions || {}),
-            take: 1,
-        };
+        // findOptions = {
+        //     ...(findOptions || {}),
+        //     take: 1,
+        // };
 
         FindOptionsUtils.applyOptionsToQueryBuilder(qb, findOptions);
 
